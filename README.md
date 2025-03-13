@@ -1,14 +1,14 @@
 ## Agent-based model python script for estimating migration flow from a conflict-induced country
 
-This is the python script for estimating migration on a daily basis from a conflict-induced region. The input to the script is a conflict data, a synthetic population. The output is a time series data with migration estimate from each region.
+This is a Python script for estimating daily migration from a conflict-induced region. The inputs are conflict data and a synthetic population. The output is time series data with migration estimates from each region.
 
 ### Files:
 
-`file_paths_and_consts.py`: File for specifying necessary files and directories. Needs to be changed based on user's local directory
-`abm_single_region.py`: Primary script for running the agent-based model
-`abm_parallel.sbatch`: sbatch script for running parallel jobs on Slurm. In practice, we run multiple simultaneous jobs for each Raion of Ukraine. The generator file is `abm_parameter_generator_slurm.py`
-`neighbor_raions.csv`: Helper file for the abm
-`ukraine_refugee_data_2.csv`: Observed data for the abm
+`file_paths_and_consts.py`: File for specifying necessary files and directories. Needs to be changed based on user's local directory <br>
+`abm_single_region.py`: Primary script for running the agent-based model <br>
+`abm_parallel.sbatch`: sbatch script for running parallel jobs on Slurm. In practice, we run multiple simultaneous jobs for each Raion of Ukraine. The generator file is `abm_parameter_generator_slurm.py` <br>
+`neighbor_raions.csv`: Helper file for the abm <br>
+`ukraine_refugee_data_2.csv`: Observed data for the abm <br>
 
 ### Required files for the primary script
 
@@ -40,3 +40,19 @@ Corresponds to line 171-174 of the script
 ### Required packages
 
 `pandas, numpy, s2sphere`
+
+## Attribution
+
+If you find this helpful, please cite our work
+
+@article{mehrab2024agent,
+  title={An agent-based framework to study forced migration: A case study of Ukraine},
+  author={Mehrab, Zakaria and Stundal, Logan and Venkatramanan, Srinivasan and Swarup, Samarth and Lewis, Bryan and Mortveit, Henning S and Barrett, Christopher L and Pandey, Abhishek and Wells, Chad R and Galvani, Alison P and others},
+  journal={PNAS nexus},
+  volume={3},
+  number={3},
+  pages={pgae080},
+  year={2024},
+  publisher={Oxford University Press US}
+}
+
