@@ -45,7 +45,7 @@ Corresponds to line 171-174 of the script
 
 If you find this helpful, please cite our work
 
-@article{mehrab2024agent,
+`@article{mehrab2024agent,
   title={An agent-based framework to study forced migration: A case study of Ukraine},
   author={Mehrab, Zakaria and Stundal, Logan and Venkatramanan, Srinivasan and Swarup, Samarth and Lewis, Bryan and Mortveit, Henning S and Barrett, Christopher L and Pandey, Abhishek and Wells, Chad R and Galvani, Alison P and others},
   journal={PNAS nexus},
@@ -54,5 +54,5 @@ If you find this helpful, please cite our work
   pages={pgae080},
   year={2024},
   publisher={Oxford University Press US}
-}
+}`
 
