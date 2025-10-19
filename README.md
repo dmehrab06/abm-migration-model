@@ -1,3 +1,5 @@
+Update on Oct 19,2025: This README  is outdated. Please see the `version-2` branch
+
 ## Agent-based model python script for estimating migration flow from a conflict-induced country
 
 This is a Python script for estimating daily migration from a conflict-induced region. The inputs are conflict data and a synthetic population. The output is time series data with migration estimates from each region.
