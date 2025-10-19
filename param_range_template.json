@@ -1,0 +1,34 @@
+{
+    "params": {"param_distance_decay": 3.099605163849618, 
+               "param_migration_bias": 146.8980720954977, 
+               "param_risk_growth_rate": 10.00, 
+               "param_discount_rate": 19.054882614646477, 
+               "param_threshold_hi": 0.7797019111846406, 
+               "param_lambda1": 0.7988009198556324, 
+               "param_lambda2": 0.654851506153989,
+               "refugee_among_displaced": 0.2744379
+              },
+    "lo": {
+        "param_distance_decay": 2.0, 
+        "param_migration_bias": 50.0, 
+        "param_risk_growth_rate": 2.0, 
+        "param_discount_rate": 0.0, 
+        "param_threshold_hi": 0.0, 
+        "param_lambda1": 0.0, 
+        "param_lambda2": 0.0,
+        "refugee_among_displaced": 0.25
+    },
+    
+    "hi": {
+        "param_distance_decay": 4.0, 
+        "param_migration_bias": 300.0, 
+        "param_risk_growth_rate": 30.0, 
+        "param_discount_rate": 100.0, 
+        "param_threshold_hi": 1.0, 
+        "param_lambda1": 1.0, 
+        "param_lambda2": 1.0,
+        "refugee_among_displaced": 0.4
+    },
+    "nrmse": 0.11,
+    "pcc": 0.93
+}

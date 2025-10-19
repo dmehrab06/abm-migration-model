@@ -1,0 +1,240 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data directories - ALL data files excluded from git
+# Conflict/Impact Data
+migration_data/
+conflict_data/
+slurm_logs/*
+slurm_outputs/*
+llm_data/
+Figures/*
+data/*
+results/*
+radar_charts/*
+InferenceConfig/*
+CoordinateDescentconfig/*
+**/conflict_data/
+ACLED_*.csv
+*_buffer_*_km.csv
+
+# Population and Household Data
+household_data/
+population_data/
+**/household_data/
+**/population_data/
+ukraine_*.pq
+ukraine_*.csv
+synthetic_population_*.csv
+*_KSW_*.pq
+*_s2.csv
+
+# Ground Truth and Validation Data
+ground_truth_data/
+gtruth_from_various_source/
+**/ground_truth_data/
+ukr_refugee_*.csv
+poland_refugee_*.csv
+IOM_*.csv
+IDP_*.csv
+
+# Simulation Outputs
+output_data_*/
+**/output_data_*/
+results/
+**/results/
+Agg-Result-Sim-*/
+Detail-Result-Sim-*/
+*_daily_aggregated_migrant.csv
+*_daily_detailed_migrant_info.pq
+
+# Temporary and Cache Files
+temporary_data_*/
+**/temporary_data_*/
+cached_data_*/
+**/cached_data_*/
+*_last_saved_household_state.pq
+*_timing_information.csv
+
+# Configuration and Calibration Files
+CoordinateDescentconfig/
+config_CDesc_*.json
+config_coord_*.json
+summary_seed_*.json
+FINAL_summary_*.json
+InferenceConfig/
+inference_seed_*.json
+
+# Keep essential configuration files
+!config_default.json
+!raions_paritions_10.json
+!LHC_Configs/
+
+# Ablation Study Data
+ablation_data_*/
+**/ablation_data_*/
+
+# Raw/Uncleaned Data
+raw_data/
+uncleaned_data/
+**/uncleaned_data/
+
+# SLURM and HPC logs
+logs/
+*.out
+*.err
+slurm-*.out
+CD_seed*_epoch*.out
+resource_usage_information.csv
+
+# Lock files
+locks/
+*.lock
+
+# Large files and archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.h5
+*.hdf5
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Jupyter notebooks with outputs
+*.ipynb
+.ipynb_checkpoints/
+
+# R files (if any)
+.Rhistory
+.RData
+.Rproj.user
+
+# Large datasets
+*.parquet
+*.pq
+*.feather
+
+# Documentation build files
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Specific project files to ignore
+# Keep default config but ignore generated ones
+config_*.json
+!config_default.json
+
+# Keep region partitioning and LHC seed configurations
+!raions_paritions_10.json
+!LHC_Configs/
+!LHC_Configs/*.json
+!LHC_Configs/**/*.json  # Add this line to be extra sure
+# Job submission tracking
+job_status_*.json
+
+# Resource logs
+resource_usage_*.csv
+memory_profile_*.txt
+
+# Visualization outputs
+figures/
+plots/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+# Database files (if any)
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary calculation files
+tmp/
+temp/
+*.tmp
+
+# Network graph files
+network_graphs/
+graph_*.pkl
+edge_list_*.csv
+
+# Model checkpoints and serialized objects
+*.pkl
+*.pickle
+checkpoints/
+
+# Profiling data
+*.prof
+*.lprof
+
+# Core dumps
+core.*
+
+# Mac OS
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+.directory
+.Trash-*/

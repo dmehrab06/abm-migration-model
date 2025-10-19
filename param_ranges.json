@@ -1,0 +1,22 @@
+{
+  "lo": {
+    "param_migration_bias": 0.0,
+    "param_distance_decay": 1.0,
+    "param_discount_rate": 0.0,
+    "param_risk_growth_rate": 1.0,
+    "param_threshold_hi": 0.0,
+    "param_lambda1": 0.0,
+    "param_lambda2": 0.0,
+    "refugee_among_displaced": 0.0
+  },
+  "hi": {
+    "param_migration_bias": 1000.0,
+    "param_distance_decay": 10.0,
+    "param_discount_rate": 1.0,
+    "param_risk_growth_rate": 100.0,
+    "param_threshold_hi": 1.0,
+    "param_lambda1": 1.0,
+    "param_lambda2": 1.0,
+    "refugee_among_displaced": 1.0
+  }
+}
