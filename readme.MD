@@ -67,46 +67,44 @@ pip install numpy pandas scipy scikit-learn matplotlib s2sphere
 
 ## Data Requirements
 
-The model requires the following datasets (not included in repository):
+The model requires the following datasets (some not included in the repository):
 
 1. **Conflict Event Data** (ACLED format):
    - Event timestamps, locations, types, and fatalities
-   - Place: `{BASE_DIR}/conflict_data/`
+   - Conflict data used for Ukraine extracted and preprocessed from ACLED has been provided in the `conflict_data/` directory of a different branch.
 
 2. **Synthetic Population Data**:
-   - Household and individual demographics
-   - Geographic coordinates at household level
-   - Place: `{BASE_DIR}/household_data/`
+The primary agent data is a record of households with the number of different demographic groups of people living in that household, as specified in the `file_paths_and_consts.py` file (four in this case), along with the geographical location of that household. The column `matching_place_id` denotes the name of the region where the household belongs to. The region type depends on the resolution chosen for the specific use case. For Ukraine, these regions denote Raions (Admin-2 level regions). Below is the structure of the data, along with sample values for one row.
+
+| hid | OLD_PERSON | CHILD | ADULT_MALE | ADULT_FEMALE | latitude | longitude | matching_place_id |
+|-----|:-----------|-------|------------|--------------|----------|-----------|-------------------|
+|1|1|0|0|0|47.778539243187396|37.749237922373396|Kalmiuskyi|
+|..|..|..|..|..|...|...|...|
+
+
+The original synthetic data is quite large, hence excluded from the repository. They can be accessed from [here](https://net.science/files/40e8d15e-d38b-48d4-aaff-79e85e1de87e/) and can be preprocessed using the `preprocess_household_agent_data.ipynb` (can be found in the other branch) file after placing the `household, person `and `residence_location_assignment` files in the correct paths.
 
 3. **Social Network Data**:
    - Household-level connection graphs
-   - Formats: KSW networks or S2 cell-based neighbors
+Network of households. It should be created based on the resolutions of the regions and specified in the configuration file. We had used a modified version of Kleinberg's Small World Model to create the network for Ukraine. The source code can be made available upon request.
 
 4. **Ground Truth Migration Data**:
    - Historical refugee counts for validation
-   - Place: `{BASE_DIR}/ground_truth_data/`
+   - Not required for simulation, needed for validation and calibration. Available upon request
 
 ## Usage
 
 ### Running a Single Simulation (for Ukraine)
 
 ```bash
-python abm_forward_migration_tpb.py \
-  --simulation_start "2022-02-24" \
-  --simulation_end "2022-03-31" \
-  --simulation_index 1 \
-  --region_name "UA12" \
-  --param_discount_rate 0.5 \
-  --param_migration_bias 0.4 \
-  --param_distance_decay 1.5 \
-  --mode calibration
+python abm_forward_migration_tpb.py --config config_default.json --region_name Kyiv --cpu_core_usage 4
 ```
 
 ### Automated Calibration Pipeline
 
 1. **Initialize calibration** for multiple seeds:
 ```bash
-python setup_calibration.py --seeds 73000 74000 75000 --max-epochs 15
+python setup_calibration.py --seeds 73 --max-epochs 15
 ```
 
 2. **Monitor progress**:
@@ -115,12 +113,12 @@ python setup_calibration.py --seeds 73000 74000 75000 --max-epochs 15
 squeue -u $USER
 
 # Parse calibration logs
-python parse_calibration_log.py --seed 73000
+python parse_calibration_log.py --seed 73
 ```
 
 3. **Run inference** with best parameters:
 ```bash
-python infer_after_calibration.py --seed 73000 --sim 73056 --submit
+python infer_after_calibration.py --seed 73 --sim 73230 --submit
 ```
 
 ### Key Parameters
@@ -138,7 +136,6 @@ python infer_after_calibration.py --seed 73000 --sim 73056 --submit
 #### Simulation Settings
 - `simulation_start/end`: Date range for simulation
 - `time_lag`: Days of conflict history to consider
-- `mode`: "calibration" or "inference"
 - `cpu_core_usage`: Number of parallel cores
 
 ## Calibration Methodology
@@ -169,22 +166,21 @@ The automated pipeline uses **coordinate descent** to optimize parameters:
 │       └── Simulation-{ID}/          # Intermediate states
 ├── CoordinateDescentconfig/          # Calibration configs
 ├── InferenceConfig/                  # Inference configs
-└── logs/                             # SLURM output logs
+└── logs/                             # SLURM output error logs
+└── slurm_logs/                       # Detailed Simulation logs
 ```
 
 ## Model Architecture
 
 ### Forward Migration Model (ABM-TPB)
 Based on Theory of Planned Behavior with three layers:
-1. **Individual Layer**: Discounted utility from conflict events
-2. **Household Layer**: Aggregated activation and threshold dynamics
+1. **Attitude Layer**: Agents interact with Events and obtain initial attitude
+2. **Perceived Behavior Control Layer**: Agents adjust their intention based on demographic perception
 3. **Action Layer**: Binary decision (stay/migrate) with demographic-specific probabilities
 
-### Return Migration Model
-Hazard function-based approach considering:
-- Conflict context at origin (30-day lag)
-- Network effects (peer returns)
-- Demographic factors
+### Return Migration Model (Hazard Function Guided ABM)
+
+TBA
 
 ## Citation
 
@@ -218,30 +214,9 @@ This project uses synthetic population data under CC BY 4.0 license and ACLED co
 For questions or collaboration opportunities:
 - Primary Author: Zakaria Mehrab
 - Institution: University of Virginia, Biocomplexity Institute
-- Related Publication: PhD Dissertation, "Computational Modeling of Conflict-Induced Forced Migration Mobility Dynamics"
 
 ## Acknowledgments
 
 - Synthetic population data from UVA Biocomplexity Institute
 - Conflict event data from Armed Conflict Location & Event Data Project (ACLED)
 - Ground truth refugee data from various international organizations
-
-## Troubleshooting
-
-### Common Issues
-
-**Memory errors during simulation**:
-- Reduce `cpu_core_usage` or process regions separately
-- Use `--S2_LEVEL` to adjust spatial resolution
-
-**SLURM jobs not completing**:
-- Check logs in `logs/` directory
-- Verify data paths in `file_paths_and_consts.py`
-- Ensure sufficient walltime allocation
-
-**Calibration not converging**:
-- Adjust `max_epochs` or `line_search_len`
-- Check parameter bounds in `coordinate_descent_pipeline.py`
-- Verify ground truth data quality and coverage
-
-For detailed documentation on the theoretical framework, see the included `Proposal_v2_Zak.pdf`.
