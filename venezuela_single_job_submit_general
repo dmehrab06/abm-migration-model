@@ -1,0 +1,21 @@
+python create_dirs.py $1
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0101
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE2313
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1303
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1608
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0814
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE2401
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0701
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0705
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0318
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1519
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0511
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE2312
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1914
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0604
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1308
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1510
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE0706
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1114
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE2317
+sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch $2 VE1105

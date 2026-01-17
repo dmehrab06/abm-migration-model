@@ -49,11 +49,12 @@ if __name__ == "__main__":
     
     HOUSEHOLD_DATA_PREFIX = args.household_data_prefix
     household_file_name = f'{HOUSEHOLD_DIR}{HOUSEHOLD_DATA_PREFIX}.pq'
+    household_file_name_csv = f'{HOUSEHOLD_DIR}{HOUSEHOLD_DATA_PREFIX}.csv'
     
     '''load conflict_data, agent_data'''
     total_impact_data = pd.read_csv(conflict_file_name)
     total_impact_data['time'] = pd.to_datetime(total_impact_data['time'])
-    total_household_data = pd.read_parquet(household_file_name)
+    total_household_data = pd.read_parquet(household_file_name) if os.path.isfile(household_file_name) else pd.read_csv(household_file_name_csv)
     total_household_data = total_household_data.rename(columns={'latitude':'h_lat','longitude':'h_lng'})
     
     NEIGHBOR_DATA_PREFIX = args.graph_data_prefix
@@ -156,14 +157,15 @@ if __name__ == "__main__":
         impact_data['event_weight'] = impact_data.apply(lambda x: get_event_weight(x['event_type'],x['sub_event_type']),axis=1)
         
         graph_file_name = f'{HOUSEHOLD_DIR}{NEIGHBOR_DATA_PREFIX}_{REGION_NAME}_{NETWORK_TYPE}.pq'
+        graph_file_name_csv = f'{HOUSEHOLD_DIR}{NEIGHBOR_DATA_PREFIX}_{REGION_NAME}_{NETWORK_TYPE}.csv'
         logger.debug(f'trying to load {graph_file_name} as network data')
-        s2_graph_file_name = f'{HOUSEHOLD_DIR}ukraine_neighbor_{REGION_NAME}_{STRUCT}_s2.csv'
+        #s2_graph_file_name = f'{HOUSEHOLD_DIR}ukraine_neighbor_{REGION_NAME}_{STRUCT}_s2.csv'
         if os.path.isfile(graph_file_name):
             logger.debug(f'KSW network loaded as parquet file')
             neighbor_household_data = pd.read_parquet(graph_file_name)
         else:
-            logger.debug(f'KSW network not found')
-            neighbor_household_data = pd.read_csv(s2_graph_file_name,usecols=['hid_x','hid_y'])
+            logger.debug(f'KSW network loaded as csv file')
+            neighbor_household_data = pd.read_csv(graph_file_name_csv)
 
         logger.info(f'network data loaded for {REGION_NAME}')
 

@@ -126,9 +126,9 @@ def get_selective_daily_uncertainty_count(selected_simulations,ground_truth_data
         uncertain_df.to_parquet(f'{CACHE_DIR}{file_name}',index=False)
     return uncertain_df
 
-def get_daily_total_refugee_for_sim(all_dfs,upto='2022-09-15'):
+def get_daily_total_refugee_for_sim(all_dfs,upto='2022-09-15',roll=7):
     daily_total_refugee_df = (pd.concat(all_dfs)).groupby('date')['total_refugee'].sum().reset_index()
-    daily_total_refugee_df['total_refugee'] = daily_total_refugee_df['total_refugee'].rolling(7).mean()
+    daily_total_refugee_df['total_refugee'] = daily_total_refugee_df['total_refugee'].rolling(roll).mean()
     daily_total_refugee_df = daily_total_refugee_df.dropna(subset=['total_refugee'])
     daily_total_refugee_df['date'] = pd.to_datetime(daily_total_refugee_df['date'])
     daily_total_refugee_df = daily_total_refugee_df[daily_total_refugee_df.date<=pd.to_datetime(upto)]
@@ -141,11 +141,11 @@ def get_ofatconfig_for_sim(sim,param):
         default_param = json.load(json_file)
     return default_param
 
-def get_result_for_sim(simidx):
+def get_result_for_sim(simidx,start_date='2022-02-04',end_date='2022-09-01'):
     simidx = simidx if simidx!=84 else 199
     RESULT_DIR = f'{OUTPUT_DIR}forward_Migration/Agg-Result-Sim-{str(simidx).zfill(9)}/'
     all_dfs = []
-    dates = pd.date_range(start='2022-02-24', end='2022-09-01')
+    dates = pd.date_range(start=start_date, end=end_date)
     for f in os.listdir(RESULT_DIR):
         if f.endswith('daily_aggregated_migrant.csv'):
             df = pd.read_csv(f'{RESULT_DIR}{f}')
