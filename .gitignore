@@ -50,7 +50,7 @@ results/*
 radar_charts/*
 InferenceConfig/*
 CoordinateDescentconfig/*
-venezuela_configs/*
+# venezuela_configs/*
 **/conflict_data/
 ACLED_*.csv
 *_buffer_*_km.csv

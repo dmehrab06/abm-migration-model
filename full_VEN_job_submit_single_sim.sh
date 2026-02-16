@@ -1,231 +1,46 @@
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0101
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE2313
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1303
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1608
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0814
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE2401
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0701
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0705
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0318
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1519
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0511
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE2312
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1914
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0604
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1308
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1510
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE0706
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1114
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE2317
-# # sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch config_default_venezuela-large-buffer.json VE1105
-# python create_dirs.py 1011
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0101
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE2313
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1303
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1608
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0814
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE2401
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0701
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0705
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0318
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1519
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0511
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE2312
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1914
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0604
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1308
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1510
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE0706
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1114
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE2317
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1011.json VE1105
-# python create_dirs.py 1012
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0101
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE2313
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1303
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1608
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0814
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE2401
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0701
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0705
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0318
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1519
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0511
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE2312
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1914
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0604
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1308
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1510
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE0706
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1114
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE2317
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1012.json VE1105
-# python create_dirs.py 1013
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0101
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE2313
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1303
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1608
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0814
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE2401
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0701
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0705
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0318
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1519
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0511
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE2312
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1914
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0604
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1308
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1510
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE0706
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1114
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE2317
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1013.json VE1105
-# python create_dirs.py 1014
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0101
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE2313
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1303
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1608
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0814
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE2401
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0701
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0705
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0318
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1519
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0511
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE2312
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1914
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0604
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1308
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1510
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE0706
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1114
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE2317
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1014.json VE1105
-# python create_dirs.py 1015
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0101
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE2313
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1303
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1608
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0814
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE2401
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0701
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0705
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0318
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1519
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0511
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE2312
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1914
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0604
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1308
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1510
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE0706
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1114
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE2317
-# sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-Q-1015.json VE1105
+# bash venezuela_single_job_submit_general 1021 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1021.json
+# bash venezuela_single_job_submit_general 1022 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1022.json
+# bash venezuela_single_job_submit_general 1023 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1023.json
+# bash venezuela_single_job_submit_general 1024 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1024.json
+# bash venezuela_single_job_submit_general 1025 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1025.json
+# bash venezuela_single_job_submit_general 1026 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1026.json
+# bash venezuela_single_job_submit_general 1027 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1027.json
+# bash venezuela_single_job_submit_general 1028 venezuela_configs/config_venezuela_COA1_buffer_5-sim-1028.json
 
-python create_dirs.py 1015
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0101
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE2313
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1303
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1608
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0814
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE2401
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0701
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0705
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0318
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1519
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0511
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE2312
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1914
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0604
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1308
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1510
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE0706
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1114
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE2317
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1015.json VE1105
-python create_dirs.py 1016
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0101
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE2313
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1303
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1608
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0814
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE2401
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0701
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0705
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0318
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1519
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0511
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE2312
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1914
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0604
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1308
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1510
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE0706
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1114
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE2317
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1016.json VE1105
-python create_dirs.py 1017
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0101
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE2313
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1303
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1608
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0814
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE2401
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0701
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0705
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0318
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1519
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0511
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE2312
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1914
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0604
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1308
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1510
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE0706
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1114
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE2317
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1017.json VE1105
-python create_dirs.py 1018
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0101
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE2313
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1303
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1608
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0814
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE2401
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0701
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0705
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0318
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1519
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0511
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE2312
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1914
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0604
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1308
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1510
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE0706
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1114
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE2317
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1018.json VE1105
-python create_dirs.py 1019
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0101
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE2313
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1303
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1608
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0814
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE2401
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0701
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0705
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0318
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1519
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0511
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE2312
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1914
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0604
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1308
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1510
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE0706
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1114
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE2317
-sbatch --mem=32000 --cpus-per-task=4 abm_forward_migration.sbatch venezuela_configs/config-ofat-venezuela-v-1019.json VE1105
+# bash venezuela_single_job_submit_general 1031 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1031.json
+# bash venezuela_single_job_submit_general 1032 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1032.json
+# bash venezuela_single_job_submit_general 1033 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1033.json
+# bash venezuela_single_job_submit_general 1034 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1034.json
+# bash venezuela_single_job_submit_general 1035 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1035.json
+# bash venezuela_single_job_submit_general 1036 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1036.json
+# bash venezuela_single_job_submit_general 1037 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1037.json
+# bash venezuela_single_job_submit_general 1038 venezuela_configs/config_venezuela_COA2_buffer_5-sim-1038.json
+
+# bash venezuela_single_job_submit_general 1041 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1041.json
+# bash venezuela_single_job_submit_general 1042 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1042.json
+# bash venezuela_single_job_submit_general 1043 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1043.json
+# bash venezuela_single_job_submit_general 1044 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1044.json
+# bash venezuela_single_job_submit_general 1045 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1045.json
+# bash venezuela_single_job_submit_general 1046 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1046.json
+# bash venezuela_single_job_submit_general 1047 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1047.json
+# bash venezuela_single_job_submit_general 1048 venezuela_configs/config_venezuela_COA3_buffer_5-sim-1048.json
+
+#bash venezuela_single_job_submit_general 1050 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1050.json
+#bash venezuela_single_job_submit_general 1051 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1051.json
+#bash venezuela_single_job_submit_general 1052 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1052.json
+#bash venezuela_single_job_submit_general 1053 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1053.json
+#bash venezuela_single_job_submit_general 1054 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1054.json
+#bash venezuela_single_job_submit_general 1055 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1055.json
+#bash venezuela_single_job_submit_general 1056 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1056.json
+#bash venezuela_single_job_submit_general 1057 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1057.json
+#bash venezuela_single_job_submit_general 1058 venezuela_configs/config_venezuela_COA2_COA3_buffer_5-sim-1058.json
+
+bash venezuela_single_job_submit_general 1060 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1060.json
+bash venezuela_single_job_submit_general 1061 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1061.json
+bash venezuela_single_job_submit_general 1062 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1062.json
+bash venezuela_single_job_submit_general 1063 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1063.json
+bash venezuela_single_job_submit_general 1064 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1064.json
+bash venezuela_single_job_submit_general 1065 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1065.json
+bash venezuela_single_job_submit_general 1066 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1066.json
+bash venezuela_single_job_submit_general 1067 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1067.json
+bash venezuela_single_job_submit_general 1068 venezuela_configs/config_venezuela_baseline_buffer_5-sim-1068.json

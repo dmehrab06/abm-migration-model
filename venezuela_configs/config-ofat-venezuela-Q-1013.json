@@ -1,0 +1,53 @@
+{
+  "attitude": true,
+  "perceived_behavior": true,
+  "subjective_norm": true,
+  "verbose": true,
+  "eps": 0.0001,
+  "conflict_data_prefix": "ven_conflict_2022_shifted_2026_ADM2_shift_+1461_days",
+  "conflict_neighbor_buffer": 5,
+  "household_data_prefix": "venezuela_household_data_ADM2_HDX",
+  "graph_data_prefix": "KSW_HH_BALL_AAMAS",
+  "graph_params": "R_0.01_P_0.04_Q_8_al_2.3",
+  "simulation_start": "2026-01-01",
+  "simulation_end": "2026-12-31",
+  "adult_male_beta": [
+    0.02,
+    0.1
+  ],
+  "adult_female_beta": [
+    0.7,
+    0.85
+  ],
+  "elderly_beta": [
+    0.25,
+    0.25
+  ],
+  "child_beta": [
+    0.7,
+    0.85
+  ],
+  "scale_before_sigmoid": true,
+  "time_lag": 3,
+  "move_scale": 1.0,
+  "event_scale": 1.0,
+  "param_threshold_lo": 0.0,
+  "refugee_among_displaced": 0.33,
+  "phase_shift": 1000,
+  "scale_before_phase_shift": 1.0,
+  "scale_after_phase_shift": 1.0,
+  "peer_influence_steps_per_sim": 1,
+  "observe_neighbor_intention": false,
+  "simulation_index": 1012,
+  "param_distance_decay": 3.0,
+  "param_migration_bias": 100.0,
+  "param_risk_growth_rate": 27.66666666666667,
+  "param_discount_rate": 15.082996862878794,
+  "param_threshold_hi": 0.3898509555923203,
+  "param_lambda1": 0.8994004599278163,
+  "param_lambda2": 0.654851506153989,
+  "S2_LEVEL": 13,
+  "group_region_file": "venezuela_partitions_20.json",
+  "log_file": "slurm_logs",
+  "info": "venezuela sensitivity to Q (Q=100.0 here)"
+}
